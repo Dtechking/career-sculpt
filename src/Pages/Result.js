@@ -3,7 +3,11 @@
 import React from 'react';
 import { Heading, Text, Center } from '@chakra-ui/react';
 
-const Result = ({ scores }) => {
+const Result = ( scores ) => {
+  const { location } = scores;
+  const { state } = location;
+  const { score } = state;
+
   return (
     <Center>
       <div>
@@ -13,7 +17,7 @@ const Result = ({ scores }) => {
         <Text fontSize="lg" mb="4">
           Your scores:
         </Text>
-        <pre>{JSON.stringify(scores, null, 2)}</pre>
+        <pre>{JSON.stringify(score, null, 2)}</pre>
         {/* You can customize the result display based on your requirements */}
       </div>
     </Center>

@@ -9,7 +9,7 @@ function Navbar() {
         navigate(path);
         window.location.reload();
       };
-
+    
   return (
       <nav className="navbar navbar-expand-lg navbar-light">
         <div className="container-fluid">

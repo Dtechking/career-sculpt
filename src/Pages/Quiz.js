@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import Question from './Question';
 import { Button, Center } from '@chakra-ui/react';
 
@@ -112,6 +112,9 @@ const questionsData = [
 ];
 
 const Quiz = () => {
+
+  const history = useNavigate();
+  console.log("Hiiiii");
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
   const [userResponses, setUserResponses] = useState([]);
   const [quizCompleted, setQuizCompleted] = useState(false);
@@ -122,134 +125,133 @@ const Quiz = () => {
     
     if(qno === 1){
       if(selectedOption ==='Analytical') { scores[0] += 10; scores[8]+=5; }
-      if(selectedOption === 'Creative' ) { scores[6]+=10; }
-      if(selectedOption === 'Team-oriented' ) { scores[1]+=3; scores[3]+=5; }
+      else if(selectedOption === 'Creative' ) { scores[6]+=10; }
+      else if(selectedOption === 'Team-oriented' ) { scores[1]+=3; scores[3]+=5; }
     }
 
-    if(qno === 2){
+    else if(qno === 2){
       if(selectedOption === 'Problem Solving') { scores[0]+=5; scores[6]+=5; }
-      if(selectedOption === 'Communication' ) { scores[2]+=10; }
-      if(selectedOption === 'Leadership' ) { scores[2]+=5; scores[6]+=5; }
+      else if(selectedOption === 'Communication' ) { scores[2]+=10; }
+      else if(selectedOption === 'Leadership' ) { scores[2]+=5; scores[6]+=5; }
     }
 
-    if(qno === 3){
+    else if(qno === 3){
       if(selectedOption === 'Self-paced') { scores[6]+=10; }
-      if(selectedOption === 'Collaborative' ) { scores[2]+=10; scores[7]+=5; }
-      if(selectedOption === 'Guided instruction' ) { scores[1]+=3; }
+      else if(selectedOption === 'Collaborative' ) { scores[2]+=10; scores[7]+=5; }
+      else if(selectedOption === 'Guided instruction' ) { scores[1]+=3; }
     }
 
-    if(qno === 4){
+    else if(qno === 4){
       if(selectedOption === 'Achieving goals') { scores[0]+=7;  }
-      if(selectedOption === 'Cooperation' ) { scores[2]+=10; scores[7]+=7; }
-      if(selectedOption === 'Innovation' ) { scores[5]+= 10; }
+      else if(selectedOption === 'Cooperation' ) { scores[2]+=10; scores[7]+=7; }
+      else if(selectedOption === 'Innovation' ) { scores[5]+= 10; }
     }
 
-    if(qno === 5){
+    else if(qno === 5){
       if(selectedOption === 'Logical analysis') { scores[0]+=10; scores[1]+=10; }
-      if(selectedOption === 'Intuitive solutions' ) { scores[5]+=10; }
-      if(selectedOption === 'Collaborative problem-solving' ) { scores[2]+=10; }
+      else if(selectedOption === 'Intuitive solutions' ) { scores[5]+=10; }
+      else if(selectedOption === 'Collaborative problem-solving' ) { scores[2]+=10; }
     }
 
-    if(qno === 6){
+    else if(qno === 6){
       if(selectedOption === 'Stay calm and focused') { scores[0]+=10; scores[3]+=10; }
-      if(selectedOption === 'Delegate tasks' ) { scores[1]+=5; }
-      if(selectedOption === 'Seek support from others' ) { scores[7]+=10; }
+      else if(selectedOption === 'Delegate tasks' ) { scores[1]+=5; }
+      else if(selectedOption === 'Seek support from others' ) { scores[7]+=10; }
     }
 
-    if(qno === 7){
+    else if(qno === 7){
       if(selectedOption === 'Fast-paced') { scores[3]+=10; }
-      if(selectedOption === 'Structured and organized' ) { scores[6]+=10; }
-      if(selectedOption === 'Flexible and dynamic' ) { scores[3]+=10; }
+      else if(selectedOption === 'Structured and organized' ) { scores[6]+=10; }
+      else if(selectedOption === 'Flexible and dynamic' ) { scores[3]+=10; }
     }
 
-    if(qno === 8){
+    else if(qno === 8){
       if(selectedOption === 'Detail-oriented') { scores[0]+=10; scores[1]+=10; }
-      if(selectedOption === 'Big-picture thinker' ) { scores[5]+=10; }
-      if(selectedOption === 'Balanced between details and big-picture' ) { scores[0]+=7; scores[1]+=7; scores[5]+=10; }
+      else if(selectedOption === 'Big-picture thinker' ) { scores[5]+=10; }
+      else if(selectedOption === 'Balanced between details and big-picture' ) { scores[0]+=7; scores[1]+=7; scores[5]+=10; }
     }
 
-    if(qno === 9){
+    else if(qno === 9){
       if(selectedOption === 'Open to feedback and improvement') { scores[3]+=7; }
-      if(selectedOption === 'Analyze feedback critically' ) { scores[0]+=10; }
-      if(selectedOption === 'Motivated by constructive feedback' ) { scores[3]+=10; scores[5]+=7; }
+      else if(selectedOption === 'Analyze feedback critically' ) { scores[0]+=10; }
+      else if(selectedOption === 'Motivated by constructive feedback' ) { scores[3]+=10; scores[5]+=7; }
     }
 
-    if(qno === 10){
+    else if(qno === 10){
       if(selectedOption === 'Take a leadership role') { scores[5]+=5; scores[6]+=5; }
-      if(selectedOption === 'Collaborate with team members' ) { scores[2]+=10; }
-      if(selectedOption === 'Provide specialized skills' ) { scores[3]+=7; }
+      else if(selectedOption === 'Collaborate with team members' ) { scores[2]+=10; }
+      else if(selectedOption === 'Provide specialized skills' ) { scores[3]+=7; }
     }
 
-    if(qno === 11){
+    else if(qno === 11){
       if(selectedOption === 'Prioritize tasks efficiently') { scores[0] += 5; scores[6]+=5 }
-      if(selectedOption === 'Delegate tasks strategically' ) { scores[0]+=10; }
-      if(selectedOption === 'Work well under pressure' ) { scores[6]+=10; scores[3]+=10; }
+      else if(selectedOption === 'Delegate tasks strategically' ) { scores[0]+=10; }
+      else if(selectedOption === 'Work well under pressure' ) { scores[6]+=10; scores[3]+=10; }
     }
 
-    if(qno === 12){
+    else if(qno === 12){
       if(selectedOption === 'Mediate and find common ground') { scores[0]+=10; }
-      if(selectedOption === 'Listen actively to different perspectives' ) { scores[1]+=10; }
-      if(selectedOption === 'Escalate the issue to higher authorities' ) { scores[4]+=5; }
+      else if(selectedOption === 'Listen actively to different perspectives' ) { scores[1]+=10; }
+      else if(selectedOption === 'Escalate the issue to higher authorities' ) { scores[4]+=5; }
     }
 
-    if(qno === 13){
+    else if(qno === 13){
       if(selectedOption === 'Adapt quickly and stay flexible') { scores[3]+=10; }
-      if(selectedOption === 'Analyze the changes before adapting' ) { scores[0]+=10; }
-      if(selectedOption === 'Resist changes that disrupt routine' ) { scores[6]+=10; }
+      else if(selectedOption === 'Analyze the changes before adapting' ) { scores[0]+=10; }
+      else if(selectedOption === 'Resist changes that disrupt routine' ) { scores[6]+=10; }
     }
 
-    if(qno === 14){
+    else if(qno === 14){
       if(selectedOption === 'Embrace constructive criticism') { scores[5]+=10; }
-      if(selectedOption === 'Become defensive initially' ) { scores[3]+=10; }
-      if(selectedOption === 'Ignore feedback that doesn\'t align with your views' ) { scores[4]+=10; }
+      else if(selectedOption === 'Become defensive initially' ) { scores[3]+=10; }
+      else if(selectedOption === 'Ignore feedback that doesn\'t align with your views' ) { scores[4]+=10; }
     }
 
-    if(qno === 15){
-      if(selectedOption === 'Confident and enjoy public speaking') { scores[32]+=10; }
-      if(selectedOption === 'Comfortable but looking to improve' ) { scores[3]+=7; }
-      if(selectedOption === 'Avoid public speaking when possible' ) { scores[3]+=50; }
+    else if(qno === 15){
+      if(selectedOption === 'Confident and enjoy public speaking') { scores[3]+=10; }
+      else if(selectedOption === 'Comfortable but looking to improve' ) { scores[3]+=7; }
+      else if(selectedOption === 'Avoid public speaking when possible' ) { scores[3]+=50; }
     }
 
-    if(qno === 16){
+    else if(qno === 16){
       if(selectedOption === 'Visual arts such as painting or photography') { scores[4]+=10; }
-      if(selectedOption === 'Performing arts like music or theater' ) { scores[4]+=10; scores[7]+=10; }
-      if(selectedOption === 'Literary arts and writing' ) { scores[2]+=10; scores[6]+=10; }
+      else if(selectedOption === 'Performing arts like music or theater' ) { scores[4]+=10; scores[7]+=10; }
+      else if(selectedOption === 'Literary arts and writing' ) { scores[2]+=10; scores[6]+=10; }
     }
 
-    if(qno === 17){
+    else if(qno === 17){
       if(selectedOption === 'Efficiency and functionality') { scores[0]+=25; scores[1]+=7;}
-      if(selectedOption === 'Innovation and cutting-edge design' ) { scores[5]+=30; scores[1]+=7; }
-      if(selectedOption === 'Enhancing user experience' ) { scores[2]+=5; scores[7]+=15; }
+      else if(selectedOption === 'Innovation and cutting-edge design' ) { scores[5]+=30; scores[1]+=7; }
+      else if(selectedOption === 'Enhancing user experience' ) { scores[2]+=5; scores[7]+=15; }
     }
 
-    if(qno === 18){
+    else if(qno === 18){
       if(selectedOption === 'Integral to decision-making') { scores[7]+=10; }
-      if(selectedOption === 'Considered but not the primary factor' ) { scores[0]+=5; scores[1]+=5; scores[5]+=5; }
-      if(selectedOption === 'Minimal consideration' ) {  }
+      else if(selectedOption === 'Considered but not the primary factor' ) { scores[0]+=5; scores[1]+=5; scores[5]+=5; }
+      else if(selectedOption === 'Minimal consideration' ) {  }
     }
 
-    if(qno === 19){
+    else if(qno === 19){
       if(selectedOption === 'Inspire with a vision') { scores[5]+=10; scores[4]+=5; }
-      if(selectedOption === 'Provide tangible rewards' ) { scores[2]+=10; scores[7]+=7; }
-      if(selectedOption === 'Encourage collaborative success' ) { scores[2]+=20; scores[7]+=10; }
+      else if(selectedOption === 'Provide tangible rewards' ) { scores[2]+=10; scores[7]+=7; }
+      else if(selectedOption === 'Encourage collaborative success' ) { scores[2]+=20; scores[7]+=10; }
     }
 
-    if(qno === 20){
+    else if(qno === 20){
       if(selectedOption === 'Proactively build a professional network') { scores[2]+=20; scores[4]+=0; }
-      if(selectedOption === 'Occasionally network as needed' ) { scores[2]+=15; scores[4]+=15; }
-      if(selectedOption === 'Reserved, limited networking' ) { scores[4]+=25; }
+      else if(selectedOption === 'Occasionally network as needed' ) { scores[2]+=15; scores[4]+=15; }
+      else if(selectedOption === 'Reserved, limited networking' ) { scores[4]+=25; }
     }
 
-
-    if(qno === 21){
+    else if(qno === 21){
       if(selectedOption === 'Strategic planning and business development') { scores[0]+=10; scores[6]+=10; }
-      if(selectedOption === 'Operational efficiency and management' ) { scores[1]+=10; scores[6]+=7; }
-      if(selectedOption === 'Marketing and customer relations' ) { scores[2]+=10; scores[7]+=10; }
+      else if(selectedOption === 'Operational efficiency and management' ) { scores[1]+=10; scores[6]+=7; }
+      else if(selectedOption === 'Marketing and customer relations' ) { scores[2]+=10; scores[7]+=10; }
     }
     
     // Log the selected option
     console.log(`Selected Option: ${selectedOption}`);
-    
+
     // Save user response
     setUserResponses([...userResponses, { question, selectedOption }]);
 
@@ -263,7 +265,7 @@ const Quiz = () => {
       factual_realistic: scores[1],
       outgoing_sociable: scores[2],
       flexible_spontaneous: scores[3],
-      reserved_interospective: scores[4],
+      reserved_introspective: scores[4],
       idealistic_theoretical: scores[5],
       structural_decisive: scores[6],
       empathetic_sentimental: scores[7]
@@ -287,7 +289,7 @@ const Quiz = () => {
     if (scoreFinal.outgoing_sociable >= thresholdBusiness && scoreFinal.flexible_spontaneous >= thresholdBusiness) {
       careerSuggestions.push('Business');
     }
-      return scoreFinal;
+      return careerSuggestions;
   };
 
   const currentQuestion = questionsData[currentQuestionIndex];
@@ -303,8 +305,8 @@ const Quiz = () => {
 
   const handleQuizSubmit = () => {
     // Calculate and log the score when the user submits the quiz
-    const score = computeScore(scores);
-    
+    const careerSuggestions = computeScore(scores);
+    history('/result', { state: { careerSuggestions: careerSuggestions } });
     // You can also perform other actions like navigating to a results page.
   };
 
@@ -337,7 +339,7 @@ const Quiz = () => {
       )}
       {quizCompleted && (
         <Center>
-          <Link to="/result">
+          <Link to={{ pathname: '/result' }}>
             <Button 
               onClick={handleQuizSubmit}
               width="20%"
