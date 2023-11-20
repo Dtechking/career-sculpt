@@ -1,0 +1,116 @@
+Certainly! Here are the scores for each option based on the specified variables:
+
+1. **How do you handle challenges?**
+   - Analytical (a: 10, b: 0, c: 0, d: 0, e: 0, f: 0, g: 0, h: 0)
+   - Creative (a: 0, b: 0, c: 10, d: 0, e: 0, f: 0, g: 0, h: 0)
+   - Team-oriented (a: 0, b: 0, c: 0, d: 0, e: 0, f: 0, g: 10, h: 0)
+
+2. **What type of tasks do you enjoy the most?**
+   - Problem Solving (a: 10, b: 0, c: 0, d: 0, e: 0, f: 0, g: 0, h: 0)
+   - Communication (a: 0, b: 0, c: 0, d: 0, e: 0, f: 10, g: 0, h: 0)
+   - Leadership (a: 0, b: 0, c: 10, d: 0, e: 0, f: 0, g: 0, h: 0)
+
+3. **How do you approach learning new skills?**
+   - Self-paced (a: 10, b: 0, c: 0, d: 0, e: 0, f: 0, g: 0, h: 0)
+   - Collaborative (a: 0, b: 0, c: 10, d: 0, e: 0, f: 0, g: 0, h: 0)
+   - Guided instruction (a: 0, b: 0, c: 0, d: 0, e: 0, f: 0, g: 10, h: 0)
+
+4. **What motivates you in a team setting?**
+   - Achieving goals (a: 10, b: 0, c: 0, d: 0, e: 0, f: 0, g: 0, h: 0)
+   - Cooperation (a: 0, b: 0, c: 0, d: 0, e: 0, f: 10, g: 0, h: 0)
+   - Innovation (a: 0, b: 0, c: 10, d: 0, e: 0, f: 0, g: 0, h: 0)
+
+5. **When faced with a problem, do you prefer:**
+   - Logical analysis (a: 10, b: 0, c: 0, d: 0, e: 0, f: 0, g: 0, h: 0)
+   - Intuitive solutions (a: 0, b: 0, c: 10, d: 0, e: 0, f: 0, g: 0, h: 0)
+   - Collaborative problem-solving (a: 0, b: 0, c: 0, d: 0, e: 0, f: 0, g: 10, h: 0)
+
+6. **How do you handle stress?**
+   - Stay calm and focused (a: 10, b: 0, c: 0, d: 0, e: 0, f: 0, g: 0, h: 0)
+   - Delegate tasks (a: 0, b: 0, c: 0, d: 0, e: 0, f: 10, g: 0, h: 0)
+   - Seek support from others (a: 0, b: 0, c: 0, d: 0, e: 0, f: 0, g: 10, h: 0)
+
+7. **What environment do you thrive in?**
+   - Fast-paced (a: 0, b: 0, c: 10, d: 0, e: 0, f: 0, g: 0, h: 0)
+   - Structured and organized (a: 10, b: 0, c: 0, d: 0, e: 0, f: 0, g: 0, h: 0)
+   - Flexible and dynamic (a: 0, b: 0, c: 0, d: 0, e: 0, f: 0, g: 10, h: 0)
+
+8. **Which statement describes you best?**
+   - Detail-oriented (a: 10, b: 0, c: 0, d: 0, e: 0, f: 0, g: 0, h: 0)
+   - Big-picture thinker (a: 0, b: 0, c: 10, d: 0, e: 0, f: 0, g: 0, h: 0)
+   - Balanced between details and big-picture (a: 0, b: 0, c: 0, d: 0, e: 0, f: 0, g: 10, h: 0)
+
+9. **How do you handle feedback?**
+   - Open to feedback and improvement (a: 0, b: 0, c: 10, d: 0, e: 0, f: 0, g: 0, h: 0)
+   - Analyze feedback critically (a: 10, b: 0, c: 0, d: 0, e: 0, f: 0, g: 0, h: 0)
+   - Motivated by constructive feedback (a: 0, b: 0, c: 0, d: 0, e: 0, f: 0, g: 10, h: 0)
+
+10. **How do you contribute to a team project?**
+    - Take a leadership role (a: 0, b: 0, c: 10, d: 0, e: 0, f: 0, g: 0, h: 0)
+    - Collaborate with team members (a: 0, b: 0, c: 0, d: 0, e: 0, f: 10, g: 0, h: 0)
+    - Provide specialized skills (a: 10, b: 0, c: 0, d: 0, e: 0, f: 0, g: 0, h: 0)
+
+11. **How do you handle tight deadlines?**
+    - Prioritize tasks efficiently (a: 0, b: 0, c: 0, d: 0, e: 0, f: 10, g: 0, h: 0)
+    - Delegate tasks strategically (a: 0, b: 0, c: 10, d: 0, e: 0, f: 0, g: 0, h: 0)
+    - Work well under pressure (a: 0, b: 0, c: 0, d: 0, e: 0, f: 0, g: 10, h: 0)
+
+14. **When working in a team, how do you handle disagreements?**
+    - Mediate and find common ground (a: 0, b: 0, c: 10, d: 0, e: 0, f: 0, g: 0, h: 0)
+    - Listen actively to different perspectives (a: 0, b: 0, c: 0, d: 0, e: 0, f: 10, g: 0, h: 0)
+    - Escalate the issue to higher authorities (a: 0, b: 0, c: 0, d: 0, e: 0, f: 0, g: 10, h: 0)
+
+15. **How do you adapt to changes in the workplace?**
+    - Adapt quickly and stay flexible (a: 0, b: 0, c: 0, d: 0, e: 0, f: 0, g: 10, h: 0)
+    - Analyze the changes before adapting (a: 10, b: 0, c: 0, d: 0, e: 0, f: 0, g: 0, h: 0)
+    - Resist changes that disrupt routine (a: 0, b: 0, c: 0, d: 0, e: 0, f: 0, g: 0, h: 10)
+
+17. **How do you handle feedback from peers?**
+    - Embrace constructive criticism (a: 0, b: 0, c: 10, d: 0, e: 0, f: 0, g: 0, h: 0)
+    - Become defensive initially (a: 0, b: 0, c: 0, d: 0, e: 0, f: 10, g: 0, h: 0)
+    - Ignore feedback that doesn't align with your views (a: 0, b: 0, c: 0, d: 0, e: 0, f: 0, g: 10, h: 0)
+
+31. **In problem-solving, do you prefer applying scientific principles and mathematical models? (Engineering)**
+    - Analytical and data-driven (a: 10, b: 0, c: 0, d: 0, e: 0, f: 0, g: 0, h: 0)
+    - Creative and innovative (a: 0, b: 0, c: 10, d: 0, e: 0, f: 0, g: 0, h: 0)
+    - Collaborative problem-solving (a: 0, b: 0, c: 0, d: 0, e: 0, f: 0, g: 10, h: 0)
+
+34. **How do you express yourself artistically? (Arts)**
+    - Visual arts such as painting or photography (a: 0, b: 0, c: 0, d: 0, e: 10, f: 0, g: 0, h: 0)
+    - Performing arts like music or theater (a: 0, b: 0, c: 0, d: 0, e: 0, f: 10, g: 0, h: 0)
+    - Literary arts and writing (a: 0, b: 0, c: 0, d: 0, e: 0, f: 0, g: 0, h: 10)
+
+35. **What motivates you in the design and creation of new products? (Engineering)**
+    - Efficiency and functionality (a: 0, b: 0, c: 0, d: 10, e: 0, f: 0, g: 0, h: 0)
+    - Innovation and cutting-edge design (a: 0, b: 0, c: 0, d: 0, e: 0, f: 10, g: 0, h: 0)
+    - Enhancing user experience (a: 0, b: 0, c: 0, d: 0, e: 0, f: 0, g: 10, h: 0)
+
+42. **What role do ethics and integrity play in your decision-making?**
+   - Integral to decision-making (a: 10, b: 0, c: 0, d: 0, e: 0, f: 0, g: 0, h: 0)
+   - Considered but not the primary factor (a: 0, b: 0, c: 10, d: 0, e: 0, f: 0, g: 0, h: 0)
+   - Minimal consideration (a: 0, b: 0, c: 0, d: 0, e: 0, f: 10, g: 0, h: 0)
+
+43. **In a leadership position, how do you motivate your team?**
+   - Inspire with a vision (a: 0, b: 0, c: 10, d: 0, e: 0, f: 0, g: 0, h: 0)
+   - Provide tangible rewards (a: 0, b: 0, c: 0, d: 0, e: 0, f: 10, g: 0, h: 0)
+   - Encourage collaborative success (a: 0, b: 0, c: 0, d: 0, e: 0, f: 0, g: 10, h: 0)
+
+48. **How do you approach networking for career advancement?**
+   - Proactively build a professional network (a: 0, b: 0, c: 10, d: 0, e: 0, f: 0, g: 0, h: 0)
+   - Occasionally network as needed (a: 0, b: 0, c: 0, d: 0, e: 0, f: 10, g: 0, h: 0)
+   - Reserved, limited networking (a: 0, b: 0, c: 0, d: 0, e: 0, f: 0, g: 10, h: 0)
+
+50. **How do you approach learning from failures and setbacks?**
+   - Analyze failures for improvement (a: 0, b: 0, c: 0, d: 0, e: 0, f: 10, g: 0, h: 0)
+   - Resilient, bounce back quickly (a: 0, b: 0, c: 0, d: 0, e: 0, f: 0, g: 10, h: 0)
+   - Prefer to avoid failure altogether (a: 0, b: 0, c: 10, d: 0, e: 0, f: 0, g: 0, h: 0)
+
+51. **What aspect of a business interests you the most?**
+   - Strategic planning and business development (a: 0, b: 0, c: 10, d: 0, e: 0, f: 0, g: 0, h: 0)
+   - Operational efficiency and management (a: 0, b: 0, c: 0, d: 0, e: 0, f: 10, g: 0, h: 0)
+   - Marketing and customer relations (a: 0, b: 0, c: 0, d: 0, e: 0, f: 0, g: 10, h: 0)
+
+55. **How do you approach public speaking and presentations?**
+   - Confident and enjoy public speaking (a: 0, b: 0, c: 10, d: 0, e: 0, f: 0, g: 0, h: 0)
+   - Comfortable but looking to improve (a: 0, b: 0, c: 0, d: 0, e: 0, f: 10, g: 0, h: 0)
+   - Avoid public speaking when possible (a: 0, b: 0, c: 0, d: 0, e: 0, f: 0, g: 10, h: 0)
