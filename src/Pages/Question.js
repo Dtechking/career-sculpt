@@ -1,46 +1,38 @@
 import React from 'react';
-import { Box, Button, Center } from '@chakra-ui/react';
+import { Container, Row, Col, Button } from 'react-bootstrap';
 
 const Question = ({ qno, question, options, handleAnswer }) => {
   return (
-    <Center>
-      <Box
-        textAlign="center"
-        borderRadius="lg"
-        w="60%"
-        p="20"
-        marginTop="50px"
-        border="2px"
-        boxShadow="lg"
-      >
-        <div style={{ border: '2px solid black', paddingTop : '30px', borderRadius: '15px'}}>
-        <div width="80%">
-          <h3>{question}</h3>
-        </div>
-        
-        <Box p="20px" >
-          {options.map((option, index) => (
-            <Button
-              key={index}
-              onClick={() => handleAnswer(option, question, qno)}
-              marginY="2"
-              width="40%"
-              colorScheme="orange"
-              variant="solid"
-              p="10px"
-              marginLeft="50px"
-              marginRight="50px"
-              marginTop="10px"
-              marginBottom="10px"
-              borderRadius='10px'
-            >
-              {option}
-            </Button>
-          ))}
-        </Box>
-        </div>
-      </Box>
-    </Center>
+    <Container
+      className="d-flex justify-content-center align-items-center"
+      style={{ maxWidth: '90%', minWidth: '75%' }}
+    >
+      <Row className='row-xl'>
+        <Col xs={12} md={10} lg={8} style={{ width: '100%' }}>
+          <div className="border p-4 mt-5 text-center rounded" style={{ backgroundColor: '#f8f9fa', width: '100%' }}>
+            <div style={{ border: '2px solid black', paddingTop: '30px', borderRadius: '15px', width: '100%' }}>
+              <div className="mb-4">
+                <h3>{question}</h3>
+              </div>
+
+              <div className="p-4" style={{ backgroundColor: '#f0f0f0', width: '80%', margin: 'auto' }}>
+                {options.map((option, index) => (
+                  <Button
+                    key={index}
+                    onClick={() => handleAnswer(option, question, qno)}
+                    className="mb-2 w-100"
+                    variant="primary" // Set the desired color for the options
+                    style={{ borderRadius: '10px' }}
+                  >
+                    {option}
+                  </Button>
+                ))}
+              </div>
+            </div>
+          </div>
+        </Col>
+      </Row>
+    </Container>
   );
 };
 

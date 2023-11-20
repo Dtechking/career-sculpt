@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Link, useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import Question from './Question';
 import { Button, Center } from '@chakra-ui/react';
 
@@ -114,15 +114,13 @@ const questionsData = [
 const Quiz = () => {
 
   const history = useNavigate();
-  console.log("Hiiiii");
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
   const [userResponses, setUserResponses] = useState([]);
   const [quizCompleted, setQuizCompleted] = useState(false);
-
-  let scores = [ 0, 0, 0, 0, 0, 0, 0, 0];
+  const [cumscores, setcumScores] = useState([0, 0, 0, 0, 0, 0, 0, 0]);
 
   const handleAnswer = (selectedOption, question, qno) => {
-    
+    const scores = [...cumscores];
     if(qno === 1){
       if(selectedOption ==='Analytical') { scores[0] += 10; scores[8]+=5; }
       else if(selectedOption === 'Creative' ) { scores[6]+=10; }
@@ -143,7 +141,7 @@ const Quiz = () => {
 
     else if(qno === 4){
       if(selectedOption === 'Achieving goals') { scores[0]+=7;  }
-      else if(selectedOption === 'Cooperation' ) { scores[2]+=10; scores[7]+=7; }
+      else if(selectedOption === 'Cooperation' ) { scores[2]+=20; scores[7]+=10; }
       else if(selectedOption === 'Innovation' ) { scores[5]+= 10; }
     }
 
@@ -252,6 +250,7 @@ const Quiz = () => {
     // Log the selected option
     console.log(`Selected Option: ${selectedOption}`);
 
+    setcumScores(scores);
     // Save user response
     setUserResponses([...userResponses, { question, selectedOption }]);
 
@@ -271,9 +270,18 @@ const Quiz = () => {
       empathetic_sentimental: scores[7]
     };
     
-    const thresholdEngineering = 70;
-    const thresholdMedical = 60;
-    const thresholdBusiness = 50;
+    console.log(` Score 1 : ${scoreFinal.objective_analytical}`);
+    console.log(` Score 2 : ${scoreFinal.factual_realistic}`);
+    console.log(` Score 3 : ${scoreFinal.outgoing_sociable}`);
+    console.log(` Score 4 : ${scoreFinal.flexible_spontaneous}`);
+    console.log(` Score 5 : ${scoreFinal.reserved_introspective}`);
+    console.log(` Score 6 : ${scoreFinal.idealistic_theoretical}`);
+    console.log(` Score 7 : ${scoreFinal.structural_decisive}`);
+    console.log(` Score 8 : ${scoreFinal.empathetic_sentimental}`);
+
+    const thresholdEngineering = 30;
+    const thresholdMedical = 20;
+    const thresholdBusiness = 20;
 
 // Analyze scores and provide career suggestions
     const careerSuggestions = [];
@@ -289,7 +297,7 @@ const Quiz = () => {
     if (scoreFinal.outgoing_sociable >= thresholdBusiness && scoreFinal.flexible_spontaneous >= thresholdBusiness) {
       careerSuggestions.push('Business');
     }
-      return careerSuggestions;
+    history('/result', { state: { careerSuggestions, scoreFinal } });
   };
 
   const currentQuestion = questionsData[currentQuestionIndex];
@@ -300,12 +308,15 @@ const Quiz = () => {
     } else {
       setQuizCompleted(true);
     }
-    console.log(`${currentQuestionIndex} = ${scores[0]}`);
+    console.log(`${currentQuestionIndex} = ${cumscores[0]}`);
   }
 
   const handleQuizSubmit = () => {
     // Calculate and log the score when the user submits the quiz
-    const careerSuggestions = computeScore(scores);
+    const careerSuggestions = computeScore(cumscores);
+    for(let i=0; i<careerSuggestions.length; i++){
+      console.log(` Selected : ${careerSuggestions[i]}`);
+    }
     history('/result', { state: { careerSuggestions: careerSuggestions } });
     // You can also perform other actions like navigating to a results page.
   };
@@ -339,7 +350,6 @@ const Quiz = () => {
       )}
       {quizCompleted && (
         <Center>
-          <Link to={{ pathname: '/result' }}>
             <Button 
               onClick={handleQuizSubmit}
               width="20%"
@@ -354,7 +364,6 @@ const Quiz = () => {
             >
               Submit Quiz
             </Button>
-          </Link>
         </Center>
       )}
     </div>
