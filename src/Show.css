@@ -1,3 +1,11 @@
+/* Add these styles to your Show.css file */
+body,
+html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  overflow: hidden;
+}
 
 #contact {
     background: url(Images/contact-background-1-1.jpg) no-repeat;
@@ -184,6 +192,10 @@
     background: #0D948D;
   }
   body{
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      overflow: hidden;
       box-sizing: border-box;
       background-image: linear-gradient(to right top, #eafaf1, #ebf9f3, #edf9f5, #eff8f6, #f1f7f6, #f1f7f6, #f1f6f6, #f1f6f6, #eff6f6, #ecf6f5, #eaf6f4, #e8f6f3);
   }
@@ -215,7 +227,11 @@
   
   /*hero section*/
   .hero{
+      padding-top: 20px;
       height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
       width: 100%;
       background:
       linear-gradient(
@@ -229,7 +245,7 @@
       background-attachment: fixed;
   }
   .hero-header{
-      margin-top: 100px;
+      margin-top: 0px;
   }
   .hero-header h2{
       color: white;

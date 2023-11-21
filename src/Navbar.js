@@ -35,6 +35,11 @@ function Navbar() {
                 </Link>
               </li>
               <li className="nav-item">
+                <Link className="nav-link" id="links" to="/aboutus" onClick={() => handleLinkClick('/aboutus')}>
+                  ABOUT US
+                </Link>
+              </li>
+              <li className="nav-item">
                 <Link className="nav-link" id="links" to="/contacts" onClick={() => handleLinkClick('/contacts')}>
                   CONTACTS
                 </Link>

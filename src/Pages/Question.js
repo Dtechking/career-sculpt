@@ -3,9 +3,10 @@ import { Container, Row, Col, Button } from 'react-bootstrap';
 
 const Question = ({ qno, question, options, handleAnswer }) => {
   return (
-    <Container
+    <div style={{ width: '100%' }}>
+      <Container
       className="d-flex justify-content-center align-items-center"
-      style={{ maxWidth: '90%', minWidth: '75%' }}
+      style={{ maxWidth: '90%', minWidth: '90%' }}
     >
       <Row className='row-xl'>
         <Col xs={12} md={10} lg={8} style={{ width: '100%' }}>
@@ -33,6 +34,8 @@ const Question = ({ qno, question, options, handleAnswer }) => {
         </Col>
       </Row>
     </Container>
+    </div>
+    
   );
 };
 

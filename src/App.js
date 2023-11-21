@@ -5,6 +5,7 @@ import Navbar from "./Navbar";
 import Contacts from "./Contacts";
 import Quiz from "./Pages/Quiz";
 import Result from "./Pages/Result";
+import About from "./About";
 
 const App = () => {
     return(
@@ -16,6 +17,7 @@ const App = () => {
                     <Route path="/contacts" element={<Contacts />} />
                     <Route path="/user" element={<UserSwitch />} />
                     <Route path="/quiz" element={<Quiz />} />
+                    <Route path="/aboutus" element={<About />} />
                     <Route path="/result" element={<Result />} />
                 </Routes>
             </div>

@@ -312,17 +312,23 @@ const Quiz = () => {
   }
 
   const handleQuizSubmit = () => {
-    // Calculate and log the score when the user submits the quiz
+    if (cumscores) {
     const careerSuggestions = computeScore(cumscores);
-    for(let i=0; i<careerSuggestions.length; i++){
+    for (let i = 0; i < careerSuggestions.length; i++) {
       console.log(` Selected : ${careerSuggestions[i]}`);
     }
-    history('/result', { state: { careerSuggestions: careerSuggestions } });
+      history('/result', { state: { careerSuggestions: careerSuggestions } });
     // You can also perform other actions like navigating to a results page.
-  };
+    } else {
+      console.error("cumscores is undefined");
+    };
+  }
 
   return (
-    <div>
+    <div 
+      className='align-items-center w-200'
+      style={{ width:"100%" }}
+    >
       <Question
         question={currentQuestion.question}
         options={currentQuestion.options}
