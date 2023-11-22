@@ -326,15 +326,17 @@ const Quiz = () => {
 
   return (
     <div 
-      className='align-items-center w-200'
-      style={{ width:"100%" }}
+      className='align-items-center'
     >
+      <Center>
       <Question
         question={currentQuestion.question}
         options={currentQuestion.options}
         handleAnswer={handleAnswer}
         qno={currentQuestion.qno}
       />
+      </Center>
+      
       {!quizCompleted && (
         <Center>
            <Button 

@@ -7,3 +7,28 @@
     padding-top: 20px;
     padding-bottom: 100px;
 }
+.slide-in-signup {
+    animation: slideInAnimationSignup 1s ease-in-out forwards;
+  }
+
+@keyframes slideInAnimationSignup {
+    from {
+      transform: translateX(0);
+    }
+    to {
+      transform: translateX(-70%);
+    }
+  }
+
+  .slide-in-login {
+    animation: slideInAnimationLogin 1s ease-in-out forwards;
+  }
+  
+  @keyframes slideInAnimationLogin {
+    from {
+      transform: translateX(-70%);
+    }
+    to {
+      transform: translateX(0);
+    }
+  }

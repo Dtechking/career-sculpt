@@ -1,4 +1,11 @@
 /* Add these styles to your Show.css file */
+/*
+font-family: 'Nunito', sans-serif;
+font-family: 'Poppins', sans-serif;
+font-family: 'Roboto Slab', serif;
+font-family: 'Rubik', sans-serif;
+*/
+
 body,
 html {
   margin: 0;
@@ -68,6 +75,14 @@ html {
     cursor: pointer;
     align-items: flex-start;
   }
+  #does{
+    position: relative;
+    height: 100vh;
+    display: flex;
+  }
+  .about-image {
+    width: 100%; /* Make sure the image takes the full width of its container */
+}
   #contain #contactinfo ul.info li span:nth-child(1) {
     width: 30px;
     min-width: 20px;
@@ -310,17 +325,21 @@ html {
     padding-top: 8%;
     color: #223141;
     font-weight: 900;
-    font-family: "Oswald", sans-serif;
+    font-family: 'Rubik', sans-serif;
+    
   }
-  
   .say {
     margin-top: 15px;
+    font-size: 18px; /* Adjust the font size as needed */
+    font-weight: 500; /* Adjust the font weight to make it lighter */
+    color: #333;
   }
   
   .wassup {
     padding-bottom: 5%;
     color: black;
-    text-align: center;
+    text-align: justify;
+    font-family: 'Rubik', sans-serif;
   }
   
   .login {
@@ -330,7 +349,7 @@ html {
   .guide{
     color: #D35400;
     font-weight: 900;
-    font-family: "Oswald", sans-serif;
+    font-family: 'Rubik', sans-serif;
   }
   
   @media screen and (min-width:480px) and (max-width: 767px){

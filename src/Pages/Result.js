@@ -49,7 +49,7 @@ const Result = () => {
   };
 
   const handleBackDomainClick = () => {
-    navigate('/domains');
+    navigate('/domain');
   };
 
   if (!careerSuggestions || careerSuggestions.length === 0) {
@@ -66,7 +66,7 @@ const Result = () => {
   }
 
   return (
-    <Container className="mt-5">
+    <Container className="mt-5" style={{overflowY: 'auto'}}>
       <Row>
         <Col>
           <h1 className="display-4 text-center">Quiz Result</h1>

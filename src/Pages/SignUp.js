@@ -1,15 +1,8 @@
-import React, { useState } from 'react';
-import {
-  ChakraProvider,
-  CSSReset,
-  Box,
-  Heading,
-  FormControl,
-  FormLabel,
-  Input,
-  Select,
-  Button,
-} from '@chakra-ui/react';
+import React, { useState, useEffect } from 'react';
+import { Container, Row, Col, Form, Button, Image } from 'react-bootstrap';
+import "./SignUp.css";
+import signInImage from '../Images/Sign_in.jpg';
+import axios from 'axios';
 
 const SignUp = () => {
   const [name, setName] = useState('');
@@ -20,93 +13,109 @@ const SignUp = () => {
   const [password, setPassword] = useState('');
   const [confirmPassword, setConfirmPassword] = useState('');
 
-  const handleSignUp = (event) => {
-    event.preventDefault();
-    // Implement user registration logic here
-    console.log('Name:', name);
-    console.log('Age:', age);
-    console.log('Phone:', phone);
-    console.log('Email:', email);
-    console.log('Status:', status);
-    console.log('Password:', password);
-    console.log('Confirm Password:', confirmPassword);
+  const handleSubmit = async(e) => {
+    e.preventDefault();
+
+    try{
+      const response = await axios.post('http://localhost:5000/api/User/signup',{
+        name,email,age,phone,status,password
+      });
+      console.log(response.data);
+    }catch(error){
+      console.log(error);
+    }
+
+    // Reset the form fields
+    setName('');
+    setEmail('');
+    setAge('');
+    setPhone('');
+    setStatus('Student');
+    setPassword('');
   };
 
   return (
-    <ChakraProvider>
-      <CSSReset />
-      <Box className="signup-container" p={4} mt={8} width="300px" margin="auto">
-        <Heading mb={4}>Sign Up</Heading>
-        <form onSubmit={handleSignUp}>
-          <FormControl mb={4}>
-            <FormLabel>Name:</FormLabel>
-            <Input
+    <Container className="signup-container">
+      <h2>Sign Up</h2>
+      <Form onSubmit={handleSubmit}>
+        <Row>
+          <Form.Group controlId="formName" className="form-rowrt">
+            <Form.Label>Name:</Form.Label>
+            <Form.Control
               type="text"
               value={name}
               onChange={(e) => setName(e.target.value)}
               required
             />
-          </FormControl>
-          <FormControl mb={4}>
-            <FormLabel>Age:</FormLabel>
-            <Input
+          </Form.Group>
+          <Form.Group controlId="formAge" className="form-rowlt">
+            <Form.Label>Age:</Form.Label>
+            <Form.Control
               type="text"
               value={age}
               onChange={(e) => setAge(e.target.value)}
               required
             />
-          </FormControl>
-          <FormControl mb={4}>
-            <FormLabel>Phone:</FormLabel>
-            <Input
-              type="text"
-              value={phone}
-              onChange={(e) => setPhone(e.target.value)}
-              required
-            />
-          </FormControl>
-          <FormControl mb={4}>
-            <FormLabel>Email:</FormLabel>
-            <Input
+          </Form.Group>
+        </Row>
+        <Row>
+          <Form.Group controlId="formEmail" className="form-rowcr">
+            <Form.Label>Email:</Form.Label>
+            <Form.Control
+              className="form-rowcr"
               type="email"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
               required
             />
-          </FormControl>
-          <FormControl mb={4}>
-            <FormLabel>Status:</FormLabel>
-            <Select
+          </Form.Group>
+        </Row>
+        <Row>
+          <Form.Group controlId="formPhone" className="form-rowrt">
+            <Form.Label>Phone:</Form.Label>
+            <Form.Control
+              type="text"
+              value={phone}
+              onChange={(e) => setPhone(e.target.value)}
+              required
+            />
+          </Form.Group>
+          <Form.Group controlId="formStatus" className="form-rowlt">
+            <Form.Label>Status:</Form.Label>
+            <Form.Control
+              as="select"
               value={status}
               onChange={(e) => setStatus(e.target.value)}
             >
               <option value="Graduate">Graduate</option>
               <option value="Student">Student</option>
               <option value="Working Professional">Working Professional</option>
-            </Select>
-          </FormControl>
-          <FormControl mb={4}>
-            <FormLabel>Password:</FormLabel>
-            <Input
+            </Form.Control>
+          </Form.Group>
+        </Row>
+        <Row>
+          <Form.Group controlId="formPassword" className="form-rowrt">
+            <Form.Label>Password:</Form.Label>
+            <Form.Control
               type="password"
               value={password}
               onChange={(e) => setPassword(e.target.value)}
               required
             />
-          </FormControl>
-          <FormControl mb={4}>
-            <FormLabel>Confirm Password:</FormLabel>
-            <Input
+          </Form.Group>
+          <Form.Group controlId="formConfirmPassword" className="form-rowlt">
+            <Form.Label>Confirm Password:</Form.Label>
+            <Form.Control
               type="password"
               value={confirmPassword}
               onChange={(e) => setConfirmPassword(e.target.value)}
               required
             />
-          </FormControl>
-          <Button type="submit" colorScheme="blue">Sign Up</Button>
-        </form>
-      </Box>
-    </ChakraProvider>
+          </Form.Group>
+        </Row>
+        <Button type="submit" variant="primary">Sign Up</Button>
+      </Form>
+    </Container>
   );
 };
 

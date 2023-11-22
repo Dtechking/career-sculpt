@@ -3,12 +3,8 @@ import { Container, Row, Col, Button } from 'react-bootstrap';
 
 const Question = ({ qno, question, options, handleAnswer }) => {
   return (
-    <div style={{ width: '100%' }}>
-      <Container
-      className="d-flex justify-content-center align-items-center"
-      style={{ maxWidth: '90%', minWidth: '90%' }}
-    >
-      <Row className='row-xl'>
+      <Container fluid>
+      <Row className="justify-content-center align-items-center">
         <Col xs={12} md={10} lg={8} style={{ width: '100%' }}>
           <div className="border p-4 mt-5 text-center rounded" style={{ backgroundColor: '#f8f9fa', width: '100%' }}>
             <div style={{ border: '2px solid black', paddingTop: '30px', borderRadius: '15px', width: '100%' }}>
@@ -34,8 +30,6 @@ const Question = ({ qno, question, options, handleAnswer }) => {
         </Col>
       </Row>
     </Container>
-    </div>
-    
   );
 };
 

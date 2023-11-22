@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import "../Show.css"
 
 const Welcome = () => {
@@ -13,11 +14,11 @@ const Welcome = () => {
                 </h2>
               </div>
               <div className="more">
-                <a href="#about">
+                <Link to="/aboutus">
                   <button className="btn" id="btns">
                     About Career <span className="brand">Guidance</span>
                   </button>
-                </a>
+                </Link>
               </div>
             </div>
           </div>
