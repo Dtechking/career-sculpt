@@ -17,19 +17,21 @@ const UserSwitch = () => {
       className="border p-4 mt-4 UserSwitch"
       fluid
       style={{
-        height: '87vh',
+        height: '98vh',
         overflowY: 'auto',
         overflowX: 'hidden',
         marginBottom: '70px',
       }}
     >
-      <Container>
+      <Container fluid>
         <Row className={`slide-in-${showLogin ? 'login' : 'signup'}`} style={{ flexWrap: 'nowrap' }}>
-          <Col xs={12} md={6} className="mr-8">
+          <Col xs={12} md={6} className="mr-6">
             <Login />
           </Col>
-          <Col xs={12} md={6} style={{ marginLeft: '125px', marginRight: '125px' }}>
+          <Col xs={12} md={6} style={{ marginLeft: '80px', marginRight: '125px' }}>
             <img
+            width='80%'
+            height='420px'
               src={signInImage}
               alt="Description"
               className="login-image"
@@ -40,8 +42,8 @@ const UserSwitch = () => {
           </Col>
         </Row>
       </Container>
-      <Container>
-        <Row className="mt-3">
+      <Container fluid>
+        <Row>
           <Col xs={12} className="text-center">
             <Button
               onClick={toggleForm}

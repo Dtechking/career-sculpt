@@ -1,15 +1,16 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { Container, Row, Col, Form, Button } from 'react-bootstrap';
-import './Login.css'; // You can create a CSS file for styling
-import signInImage from '../Images/Sign_in.jpg';
+import { Container, Form, Button } from 'react-bootstrap';
 import axios from 'axios';
+import { useAuth } from '../AuthContext';
 
 const Login = () => {
+  const { login } = useAuth();
   const navigate = useNavigate();
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [error, setError] = useState('');
+
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -19,7 +20,15 @@ const Login = () => {
         email,
         password,
       });
-      console.log(response.data);
+      
+      // Assuming the server returns a token upon successful login
+      const { token } = response.data;
+
+      // Store the token in local storage (you may want to use a more secure method)
+      localStorage.setItem('token', token);
+      login();
+
+      // Redirect to the home page or any other page you want after successful login
       navigate('/');
     } catch (error) {
       if (error.response) {

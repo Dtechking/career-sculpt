@@ -1,7 +1,29 @@
 import { Link } from "react-router-dom";
-import "../Show.css"
+import "../Show.css";
+import { useNavigate } from "react-router-dom";
+import { useState } from "react";
+import { Modal, Button } from "react-bootstrap";
+import { useAuth } from '../AuthContext';
+
 
 const Welcome = () => {
+
+  const { isLoggedIn, login, logout } = useAuth();  
+  const navigate = useNavigate();
+  const [showModal, setShowModal] = useState(false);
+
+  const handleLinkClick = (path) => {
+    navigate(path);
+  }
+
+  const handleModal = () => {
+    setShowModal(true);
+  }
+
+  const handleCloseModal = () => {
+    setShowModal(false);
+  };
+
     return (
         <div>
             <section className="hero">
@@ -20,18 +42,43 @@ const Welcome = () => {
                   </button>
                 </Link>
               </div>
-            </div>
-          </div>
-          <div className="row">
-            <div className="col-sm-12 col-md-12 col-md-12">
-              <div className="scrolls">
-                <a href="#" className="scroll-down" address="true">
-                  <img src="Images/mouse_click.png" alt="" />
-                </a>
+              <div style={{ marginTop: '30px'}}>
+                {
+                  isLoggedIn ? (
+                    <Link to="/quiz" onClick={() => handleLinkClick('/quiz')}>
+                      <button type="button" className="btn btn-dark" id="btns">
+                        Take Test
+                      </button>
+                    </Link>    
+                  ) : (
+                    <button type="button" onClick={handleModal} className="btn btn-dark" id="btns">
+                        Take Test
+                      </button>
+                  )
+                }
+                
               </div>
+              
             </div>
+            
           </div>
         </div>
+        <Modal show={showModal} onHide={handleCloseModal}>
+          <Modal.Header closeButton>
+            <Modal.Title>Login Required</Modal.Title>
+          </Modal.Header>
+          <Modal.Body>
+            <p>Please log in first to take the test.</p>
+          </Modal.Body>
+          <Modal.Footer>
+            <Button variant="secondary" onClick={handleCloseModal}>
+              Close
+            </Button>
+            <Link to="/login">
+              <Button variant="primary">Go to Login</Button>
+            </Link>
+          </Modal.Footer>
+        </Modal>
       </section>
         </div>
     )

@@ -1,28 +1,40 @@
-import React, { useState, useEffect } from 'react';
-import { Container, Row, Col, Form, Button, Image } from 'react-bootstrap';
-import "./SignUp.css";
-import signInImage from '../Images/Sign_in.jpg';
+import React, { useState } from 'react';
+import { Container, Form, Button, Row } from 'react-bootstrap';
 import axios from 'axios';
+import './SignUp.css';
+import { useAuth } from '../AuthContext';
 
 const SignUp = () => {
   const [name, setName] = useState('');
+  const [email, setEmail] = useState('');
   const [age, setAge] = useState('');
   const [phone, setPhone] = useState('');
-  const [email, setEmail] = useState('');
   const [status, setStatus] = useState('Student');
   const [password, setPassword] = useState('');
   const [confirmPassword, setConfirmPassword] = useState('');
 
-  const handleSubmit = async(e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
 
-    try{
-      const response = await axios.post('http://localhost:5000/api/User/signup',{
-        name,email,age,phone,status,password
+    try {
+      const response = await axios.post('http://localhost:5000/api/User/signup', {
+        name,
+        email,
+        age,
+        phone,
+        status,
+        password,
       });
-      console.log(response.data);
-    }catch(error){
-      console.log(error);
+      
+
+      // Assuming the server returns a message upon successful signup
+      console.log(response.data.message);
+
+      // Optionally, you can redirect to the login page or any other page after successful signup
+      // navigate('/login');
+    } catch (error) {
+      console.log(error.response.data.error);
+      // Handle signup error
     }
 
     // Reset the form fields
@@ -32,6 +44,7 @@ const SignUp = () => {
     setPhone('');
     setStatus('Student');
     setPassword('');
+    setConfirmPassword('');
   };
 
   return (
@@ -113,7 +126,9 @@ const SignUp = () => {
             />
           </Form.Group>
         </Row>
-        <Button type="submit" variant="primary">Sign Up</Button>
+        <Button type="submit" variant="primary">
+          Sign Up
+        </Button>
       </Form>
     </Container>
   );

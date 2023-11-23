@@ -10,7 +10,7 @@ body,
 html {
   margin: 0;
   padding: 0;
-  height: 100%;
+  height: 102vh;
   overflow: hidden;
 }
 
@@ -76,7 +76,6 @@ html {
     align-items: flex-start;
   }
   #does{
-    position: relative;
     height: 100vh;
     display: flex;
   }
@@ -316,7 +315,7 @@ html {
     }
   
     #about {
-    background-image: linear-gradient(to right top, #E5E7E9, #E1E4E6, #DDE1E3, #D9DEDF, #D5DBDB);
+    background-color: whitesmoke;
     padding-bottom: 30px;
   }
   

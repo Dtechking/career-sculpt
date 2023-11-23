@@ -1,26 +1,30 @@
-const express= require('express');
-const app=express();
-const cors= require('cors')
+const express = require('express');
+const app = express();
+const cors = require('cors');
 const bodyParser = require('body-parser');
+const mongoose = require('mongoose');
 
-const mongoose= require('mongoose');
 const connectionParams = {
-    useNewUrlParser: true,
-    useUnifiedTopology: true
-}
-const dburl="mongodb://127.0.0.1:27017/Career";
-mongoose.connect( dburl, connectionParams);
+  useNewUrlParser: true,
+  useUnifiedTopology: true,
+};
 
-const user= require('./router/userlogin');
+const dburl = 'mongodb://127.0.0.1:27017/Career';
+mongoose.connect(dburl, connectionParams);
+
+const userRoutes = require('./router/userlogin');
+
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 app.use(cors());
+
 app.get('/', (req, res) => {
-    res.send('Hello');
-  });
+  res.send('Hello');
+});
 
-app.use('/api/User',user);
+app.use('/api/user', userRoutes);
 
-app.listen(5000,function(req,res){
-    console.log('connected to port:5000');
+const PORT = process.env.PORT || 5000;
+app.listen(PORT, () => {
+  console.log(`Server is running on port ${PORT}`);
 });
