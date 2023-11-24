@@ -14,7 +14,7 @@ const UserSwitch = () => {
 
   return (
     <Container
-      className="border p-4 mt-4 UserSwitch"
+      className="border p-4 UserSwitch"
       fluid
       style={{
         height: '98vh',
