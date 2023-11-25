@@ -16,6 +16,10 @@ const Navbar = () => {
     navigate(path);
   };
 
+  const handleSigninClick  = (path) => {
+    navigate(path);
+  }
+
   return (
     <nav className="navbar navbar-expand-lg navbar-light">
       <div className="container-fluid">
@@ -56,7 +60,7 @@ const Navbar = () => {
                   LOGOUT
                 </button>
               ) : (
-                <Link className="nav-link" id="links" to="/user" onClick={() => handleLinkClick('/user')}>
+                <Link className="nav-link" id="links" to="/user" onClick={() => handleSigninClick('/user')}>
                   SIGN IN / SIGN UP
                 </Link>
               )}
