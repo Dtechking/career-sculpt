@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { useAuth } from './AuthContext';
+import './Show.css';
 
 const Navbar = () => {
   const navigate = useNavigate();
@@ -8,11 +9,11 @@ const Navbar = () => {
 
   const handleLogout = () => {
     logout();
+    navigate('/');
   }
 
   const handleLinkClick = (path) => {
     navigate(path);
-    window.location.reload();
   };
 
   return (
@@ -51,7 +52,7 @@ const Navbar = () => {
             </li>
             <li className="nav-item">
               {isLoggedIn ? (
-                <button className="nav-link btn" id="links" onClick={handleLogout}>
+                <button className="nav-link" id="links" onClick={handleLogout}>
                   LOGOUT
                 </button>
               ) : (

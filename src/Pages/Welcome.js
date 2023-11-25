@@ -14,6 +14,7 @@ const Welcome = () => {
 
   const handleLinkClick = (path) => {
     navigate(path);
+    
   }
 
   const handleModal = () => {
@@ -74,7 +75,7 @@ const Welcome = () => {
             <Button variant="secondary" onClick={handleCloseModal}>
               Close
             </Button>
-            <Link to="/login">
+            <Link to="/user" onClick={() => handleLinkClick('/user')}>
               <Button variant="primary">Go to Login</Button>
             </Link>
           </Modal.Footer>

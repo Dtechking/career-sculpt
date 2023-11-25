@@ -26,15 +26,14 @@ const About = () => {
                         <div className="say">
                             <p className="wassup">
                                 Career Guidance is a webpage that offers insights in both life, social, and school skills.
-                                <br />
                                 We strive to give you world-class advice on career choices based on interests, IQ (intelligence quotient), as well as a stable position in the days of tomorrow
-                                <br />
+                        
                                 With a team of diversity in culture and ethnicity, we give you access to banks of information from all corners of the globe.
                                 <br />
                                 We guarantee you a blissful experience as we help you navigate the perilous waters of life after high school on this great journey.
-                                <br />
+                            
                                 Join us and be part of the experience.
-                                <br />
+                            
                             </p>
                         </div>
                         <div className="login">
