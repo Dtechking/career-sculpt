@@ -314,6 +314,7 @@ const Quiz = () => {
   const handleQuizSubmit = () => {
     if (cumscores) {
     const careerSuggestions = computeScore(cumscores);
+      
     for (let i = 0; i < careerSuggestions.length; i++) {
       console.log(` Selected : ${careerSuggestions[i]}`);
     }

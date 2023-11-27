@@ -1,8 +1,5 @@
 .login-container {
-    display: flex;
-    align-items: center;
     justify-content: center;
-    padding: 20px;
     height: 50vh; /* Adjust the height based on your requirement */
   }
 

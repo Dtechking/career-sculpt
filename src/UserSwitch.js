@@ -14,44 +14,40 @@ const UserSwitch = () => {
 
   return (
     <Container
-      className="border p-4 mt-1 UserSwitch"
+      className="border UserSwitch"
       fluid
       style={{
-        height: '98vh',
-        overflowY: 'auto',
+        height: '93vh',
+        overflowY: 'hidden',
         overflowX: 'hidden',
-        marginBottom: '70px',
       }}
     >
-      <Container fluid>
+      <Container>
         <Row className={`slide-in-${showLogin ? 'login' : 'signup'}`} style={{ flexWrap: 'nowrap' }}>
-          <Col xs={12} md={6} className="mr-6">
+          <Col xs={12} md={6}>
             <Login />
           </Col>
-          <Col xs={12} md={6} style={{ marginLeft: '80px', marginRight: '125px' }}>
+          <Col xs={12} md={6} style={{ marginLeft: '80px', marginRight: '175px' }}>
+            <Row className='align-items-center justify-content-center'>
             <img
-            width='80%'
+            width='100%'
             height='420px'
               src={signInImage}
               alt="Description"
               className="login-image"
             />
-          </Col>
-          <Col xs={12} md={6} >
-            <SignUp />
-          </Col>
-        </Row>
-      </Container>
-      <Container fluid>
-        <Row>
-          <Col xs={12} className="text-center">
-            <Button
+              <Button
               onClick={toggleForm}
               variant="primary"
-              className="w-50"
+              className="w-50 mt-5"
             >
               {showLogin ? 'Switch to Signup' : 'Switch to Login'}
             </Button>
+            </Row>
+
+          </Col>
+          <Col xs={12} md={6} >
+            <SignUp />
           </Col>
         </Row>
       </Container>

@@ -43,6 +43,7 @@ html {
     position: absolute;
     top: 40px;
     width: 350px;
+    margin-right: 850px;
     height: calc(100% - 80px);
     z-index: 1;
     background: #112D42;
@@ -315,7 +316,7 @@ html {
     }
   
     #about {
-    background-color: whitesmoke;
+    background-color: white;
     padding-bottom: 30px;
   }
   

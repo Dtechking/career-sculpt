@@ -4,7 +4,7 @@ import { useLocation, useNavigate } from 'react-router-dom';
 import AnimateProvider from './AnimateProvider';
 
 const Analysis = ({ scoreFinal }) => (
-  <div className="border p-4 mb-4 text-center">
+  <div className="border p-4 mb-4 text-center" style={{ width: '100%' }}>
     <h3 className="text-md text-neutral-900 font-bold md:text-lg mb-3">
       Analysis
     </h3>
@@ -66,33 +66,38 @@ const Result = () => {
   }
 
   return (
-    <Container className="mt-5" style={{overflowY: 'auto'}}>
+    <Container className="mt-5" style={{overflowY: 'auto'}} fluid>
       <Row>
         <Col>
           <h1 className="display-4 text-center">Quiz Result</h1>
           <AnimateProvider className="flex flex-col space-y-10 md:max-w-xl md:mx-auto">
       <Analysis scoreFinal={scoreFinal} />
 
-      <h3 className="text-lg text-center text-neutral-900 font-bold md:text-xl mb-3">
+      <h3 className="text-lg text-center text-neutral-900 font-bold md:text-xl mt-4 mb-4">
         Your Career Suggestions are:
       </h3>
 
-      <Container className="d-flex justify-content-center align-items-center flex-wrap">
+      <Container fluid style={{justifyContent: 'center', alignItems: 'center'}}>
+        <Row>
   {careerSuggestions.map((career, index) => (
-    <div
+    <Col
       key={index}
-      className="text-6xl font-bold m-2 p-5 rounded-lg bg-orange-500 text-neutral-100 border-2 border-orange-700 md:text-7xl"
+      className="text-6xl font-bold p-5 rounded-lg bg-orange-500 text-neutral-100 border-2 border-orange-700 md:text-7xl"
       style={{
+        display: 'inline-block',
         boxShadow: '0 4px 6px rgba(0, 0, 0, 0.1)',
         backgroundColor: 'orange',
         overflow: 'hidden', // Ensure overflow is hidden to apply borderRadius
-        marginBottom: '100px', // Increase the bottom margin
-        marginTop: '70px', // Increase the top margin
+        marginBottom: '10px', // Increase the bottom margin
+        marginTop: '10px',
+        marginLeft: '50px',
+        marginRight: '50px' // Increase the top margin
       }}
     >
       <h3 className="text-center">{career}</h3>
-    </div>
+    </Col>
   ))}
+  </Row>
 </Container>
 
 

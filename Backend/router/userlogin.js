@@ -47,18 +47,23 @@ router.post('/signup', async (req, res) => {
 
 // Login route
 router.post('/login', async (req, res) => {
+  console.log("Enters Login server");
   try {
     const { email, password } = req.body;
+    console.log(email);
+    console.log(password);
 
     // Check if the user exists in the database
     const user = await User.findOne({ email });
     if (!user) {
+      console.log("User not found.");
       return res.status(404).json({ error: 'User not found' });
     }
 
     // Check if the provided password matches the user's hashed password
     const isPasswordValid = await bcrypt.compare(password, user.password);
     if (!isPasswordValid) {
+      console.log("Password Mismatch");
       return res.status(401).json({ error: 'Invalid password' });
     }
 

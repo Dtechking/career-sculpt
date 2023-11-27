@@ -12,18 +12,14 @@ const Login = () => {
   const [error, setError] = useState('');
 
   useEffect(() => {
-    const token = localStorage.getItem('token');
-    if (token) {
-      // If the token exists, consider the user as logged in
-      login();
-      navigate('/');
-    }
-  }, [login, navigate]);
+    
+  }, []);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
 
     try {
+      
       const response = await axios.post('http://localhost:5000/api/User/login', {
         email,
         password,
@@ -33,6 +29,7 @@ const Login = () => {
       localStorage.setItem('token', token);
       login();
       navigate('/');
+
     } catch (error) {
       if (error.response) {
         setError(error.response.data.error);

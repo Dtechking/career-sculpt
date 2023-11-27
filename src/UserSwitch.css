@@ -1,17 +1,14 @@
 .UserSwitch{
-    padding-top: 20px;
-    padding-bottom: 10px;
-}
-
-.form-container {
-  padding-top: 20px;
-  padding-bottom: 10px; /* Adjusted padding-bottom */
+  background-color: white;
 }
 
 .slide-in-signup {
     animation: slideInAnimationSignup 1s ease-in-out forwards;
   }
 
+  .login-image{
+    margin-top: 60px;
+  }
 @keyframes slideInAnimationSignup {
     from {
       transform: translateX(0);
